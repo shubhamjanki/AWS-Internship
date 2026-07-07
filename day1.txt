@@ -1,0 +1,15 @@
+man command
+ls command
+ls -R for recursive file listing
+
+
+
+user and group management
+principle of list privelage
+
+commands 
+sudo cat /etc/passwd---- to know all directories
+
+
+logical volume management 
+    
