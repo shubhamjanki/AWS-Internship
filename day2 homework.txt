@@ -1,0 +1,488 @@
+root@ubuntu:~$ sudo addgroups testing
+sudo: addgroups: command not found
+root@ubuntu:~$ sudo addgroup testing
+info: Selecting GID from range 1000 to 59999 ...
+info: Adding group `testing' (GID 1003) ...
+root@ubuntu:~$ sudo addgroup design 
+info: Selecting GID from range 1000 to 59999 ...
+info: Adding group `design' (GID 1004) ...
+root@ubuntu:~$ sudo addgroup hr 
+info: Selecting GID from range 1000 to 59999 ...
+info: Adding group `hr' (GID 1005) ...
+root@ubuntu:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ubuntu
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ubuntu
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ubuntu
+audio:x:29:
+dip:x:30:ubuntu
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+systemd-timesync:x:996:
+input:x:995:
+sgx:x:994:
+kvm:x:993:
+render:x:992:
+messagebus:x:101:
+syslog:x:102:
+systemd-resolve:x:991:
+uuidd:x:103:
+tss:x:104:
+lxd:x:105:ubuntu
+_ssh:x:106:
+rdma:x:107:
+tcpdump:x:108:
+landscape:x:109:
+fwupd-refresh:x:990:
+polkitd:x:989:
+admin:x:110:
+netdev:x:111:
+ubuntu:x:1000:
+docker:x:112:
+development:x:1001:
+devops:x:1002:
+testing:x:1003:
+design:x:1004:
+hr:x:1005:
+root@ubuntu:~$ sudo adduser -m dev_t1
+Unknown option: m
+adduser [--uid id] [--firstuid id] [--lastuid id]
+        [--gid id] [--firstgid id] [--lastgid id] [--ingroup group]
+        [--add-extra-groups] [--encrypt-home] [--shell shell]
+        [--comment comment] [--home dir] [--no-create-home]
+        [--allow-all-names] [--allow-bad-names]
+        [--disabled-password] [--disabled-login]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        user
+    Add a normal user
+
+adduser --system
+        [--uid id] [--group] [--ingroup group] [--gid id]
+        [--shell shell] [--comment comment] [--home dir] [--no-create-home]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        user
+   Add a system user
+
+adduser --group
+        [--gid ID] [--firstgid id] [--lastgid id]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        group
+addgroup
+        [--gid ID] [--firstgid id] [--lastgid id]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        group
+   Add a user group
+
+addgroup --system
+        [--gid id]
+        [--conf file] [--extrausers] [--quiet] [--verbose] [--debug]
+        group
+   Add a system group
+
+adduser [--extrausers] USER GROUP
+   Add an existing user to an existing group
+root@ubuntu:~$ sudo useradd -m dev_t1
+root@ubuntu:~$ sudo useradd -m dev1  
+root@ubuntu:~$ sudo useradd -m dev2 
+root@ubuntu:~$ sudo useradd -m dev3
+root@ubuntu:~$ sudo useradd -m dev4
+root@ubuntu:~$ cat /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
+_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+systemd-network:x:998:998:systemd Network Management:/:/usr/sbin/nologin
+systemd-timesync:x:996:996:systemd Time Synchronization:/:/usr/sbin/nologin
+dhcpcd:x:100:65534:DHCP Client Daemon,,,:/usr/lib/dhcpcd:/bin/false
+messagebus:x:101:101::/nonexistent:/usr/sbin/nologin
+syslog:x:102:102::/nonexistent:/usr/sbin/nologin
+systemd-resolve:x:991:991:systemd Resolver:/:/usr/sbin/nologin
+uuidd:x:103:103::/run/uuidd:/usr/sbin/nologin
+tss:x:104:104:TPM software stack,,,:/var/lib/tpm:/bin/false
+sshd:x:105:65534::/run/sshd:/usr/sbin/nologin
+pollinate:x:106:1::/var/cache/pollinate:/bin/false
+tcpdump:x:107:108::/nonexistent:/usr/sbin/nologin
+landscape:x:108:109::/var/lib/landscape:/usr/sbin/nologin
+fwupd-refresh:x:990:990:Firmware update daemon:/var/lib/fwupd:/usr/sbin/nologin
+polkitd:x:989:989:User for polkitd:/:/usr/sbin/nologin
+ubuntu:x:1000:1000:Ubuntu:/home/ubuntu:/bin/bash
+dnsmasq:x:999:65534:dnsmasq:/var/lib/misc:/usr/sbin/nologin
+dev_t1:x:1001:1006::/home/dev_t1:/bin/sh
+dev1:x:1002:1007::/home/dev1:/bin/sh
+dev2:x:1003:1008::/home/dev2:/bin/sh
+dev3:x:1004:1009::/home/dev3:/bin/sh
+dev4:x:1005:1010::/home/dev4:/bin/sh
+root@ubuntu:~$ sudo passwd -m dev4
+passwd: invalid option -- 'm'
+Usage: passwd [options] [LOGIN]
+
+Options:
+  -a, --all                     report password status on all accounts
+  -d, --delete                  delete the password for the named account
+  -e, --expire                  force expire the password for the named account
+  -h, --help                    display this help message and exit
+  -k, --keep-tokens             change password only if expired
+  -i, --inactive INACTIVE       set password inactive after expiration
+                                to INACTIVE
+  -l, --lock                    lock the password of the named account
+  -n, --mindays MIN_DAYS        set minimum number of days before password
+                                change to MIN_DAYS
+  -q, --quiet                   quiet mode
+  -r, --repository REPOSITORY   change password in REPOSITORY repository
+  -R, --root CHROOT_DIR         directory to chroot into
+  -S, --status                  report password status on the named account
+  -u, --unlock                  unlock the password of the named account
+  -w, --warndays WARN_DAYS      set expiration warning days to WARN_DAYS
+  -x, --maxdays MAX_DAYS        set maximum number of days before password
+                                change to MAX_DAYS
+
+root@ubuntu:~$ sudo passwd  dev4
+New password: 
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:~$ sudo passwd  dev3
+New password: 
+Retype new password: 
+Sorry, passwords do not match.
+passwd: Authentication token manipulation error
+passwd: password unchanged
+root@ubuntu:~$ sudo passwd  dev3
+New password: 
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:~$ sudo passwd  dev2
+New password: 
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:~$ sudo passwd  dev1
+New password: 
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:~$ sudo passwd  dev_t1
+New password: 
+Retype new password: 
+passwd: password updated successfully
+root@ubuntu:~$ cat /etc/groups
+cat: /etc/groups: No such file or directory
+root@ubuntu:~$ cat /etc/group 
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ubuntu
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ubuntu
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ubuntu
+audio:x:29:
+dip:x:30:ubuntu
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+systemd-timesync:x:996:
+input:x:995:
+sgx:x:994:
+kvm:x:993:
+render:x:992:
+messagebus:x:101:
+syslog:x:102:
+systemd-resolve:x:991:
+uuidd:x:103:
+tss:x:104:
+lxd:x:105:ubuntu
+_ssh:x:106:
+rdma:x:107:
+tcpdump:x:108:
+landscape:x:109:
+fwupd-refresh:x:990:
+polkitd:x:989:
+admin:x:110:
+netdev:x:111:
+ubuntu:x:1000:
+docker:x:112:
+development:x:1001:
+devops:x:1002:
+testing:x:1003:
+design:x:1004:
+hr:x:1005:
+dev_t1:x:1006:
+dev1:x:1007:
+dev2:x:1008:
+dev3:x:1009:
+dev4:x:1010:
+root@ubuntu:~$ sudo usermod -aG development dev_t1
+root@ubuntu:~$ sudo usermod -aG development dev1  
+root@ubuntu:~$ sudo usermod -aG development dev2
+root@ubuntu:~$ sudo usermod -aG development dev3
+root@ubuntu:~$ sudo usermod -aG development dev4
+root@ubuntu:~$ cat /etc/group
+root:x:0:
+daemon:x:1:
+bin:x:2:
+sys:x:3:
+adm:x:4:syslog,ubuntu
+tty:x:5:
+disk:x:6:
+lp:x:7:
+mail:x:8:
+news:x:9:
+uucp:x:10:
+man:x:12:
+proxy:x:13:
+kmem:x:15:
+dialout:x:20:
+fax:x:21:
+voice:x:22:
+cdrom:x:24:ubuntu
+floppy:x:25:
+tape:x:26:
+sudo:x:27:ubuntu
+audio:x:29:
+dip:x:30:ubuntu
+www-data:x:33:
+backup:x:34:
+operator:x:37:
+list:x:38:
+irc:x:39:
+src:x:40:
+shadow:x:42:
+utmp:x:43:
+video:x:44:
+sasl:x:45:
+plugdev:x:46:
+staff:x:50:
+games:x:60:
+users:x:100:
+nogroup:x:65534:
+systemd-journal:x:999:
+systemd-network:x:998:
+crontab:x:997:
+systemd-timesync:x:996:
+input:x:995:
+sgx:x:994:
+kvm:x:993:
+render:x:992:
+messagebus:x:101:
+syslog:x:102:
+systemd-resolve:x:991:
+uuidd:x:103:
+tss:x:104:
+lxd:x:105:ubuntu
+_ssh:x:106:
+rdma:x:107:
+tcpdump:x:108:
+landscape:x:109:
+fwupd-refresh:x:990:
+polkitd:x:989:
+admin:x:110:
+netdev:x:111:
+ubuntu:x:1000:
+docker:x:112:
+development:x:1001:dev_t1,dev1,dev2,dev3,dev4
+devops:x:1002:
+testing:x:1003:
+design:x:1004:
+hr:x:1005:
+dev_t1:x:1006:
+dev1:x:1007:
+dev2:x:1008:
+dev3:x:1009:
+dev4:x:1010:
+root@ubuntu:~$ id dev1
+uid=1002(dev1) gid=1007(dev1) groups=1007(dev1),1001(development)
+root@ubuntu:~$ sudo useradd -m test_tl
+sudo useradd -m test1
+sudo useradd -m test2
+sudo useradd -m test3
+sudo useradd -m test4
+root@ubuntu:~$ sudo useradd -m ops_tl
+sudo useradd -m ops1
+sudo useradd -m ops2
+sudo useradd -m ops3
+sudo useradd -m ops4
+root@ubuntu:~$ ^[[200~sudo useradd -m hr_tl
+sudo: command not found
+root@ubuntu:~$ sudo useradd -m hr1
+sudo useradd -m hr2
+sudo useradd -m hr3
+sudo useradd -msudo useradd -m design_tl sudo useradd -m design_tl
+sudo useradd -m design1
+sudo useradd -m design2
+sudo useradd -m design3
+sudo useradd -m design4
+root@ubuntu:~$ sudo usermod -aG testing test_tl
+sudo usermod -aG testing test1
+sudo usermod -aG testing test2
+sudo usermod -aG testing test3
+sudo usermod -aG testing test4
+root@ubuntu:~$ sudo usermod -aG devops ops_tl
+sudo usermod -aG devops ops1
+sudo usermod -aG devops ops2
+sudo usermod -aG devops ops3
+sudo usermod -aG devops ops4
+root@ubuntu:~$ sudo usermod -aG hr hr_tl
+sudo usermod -aG hr hr1
+sudo usermod -aG hr hr2
+sudo usermod -aG hr hr3
+sudo usermod -aG hr hr4
+usermod: user 'hr_tl' does not exist
+usermod: user 'hr2' does not exist
+usermod: user 'hr3' does not exist
+usermod: user 'hr4' does not exist
+root@ubuntu:~$ sudo useradd -m hr_tl
+sudo useradd -m hr1
+sudo useradd -m hr2
+sudo useradd -m hr3
+sudo useradd -m hr4
+useradd: user 'hr1' already exists
+root@ubuntu:~$ sudo usermod -aG hr hr_tl
+sudo usermod -aG hr hr1
+sudo usermod -aG hr hr2
+sudo usermod -aG hr hr3
+sudo usermod -aG hr hr4
+root@ubuntu:~$ sudo usermod -aG design design_tl
+sudo usermod -aG design design1
+sudo usermod -aG design design2
+sudo usermod -aG design design3
+sudo usermod -aG design design4
+root@ubuntu:~$ id dev1
+uid=1002(dev1) gid=1007(dev1) groups=1007(dev1),1001(development)
+root@ubuntu:~$ id hr1
+uid=1016(hr1) gid=1021(hr1) groups=1021(hr1),1005(hr)
+root@ubuntu:~$ id design1
+uid=1018(design1) gid=1023(design1) groups=1023(design1),1004(design)
+root@ubuntu:~$ sudo mkdir /company
+root@ubuntu:~$ pwd
+/root
+root@ubuntu:~$ ^[[200~sudo mkdir /company/development
+sudo: command not found
+root@ubuntu:~$ sudo mkdir /company/testing
+sudo mkdir /company/devops
+sudo mkdir /company/hr
+sudo mkdir /company/design^[[201~root@ubuntu:~$ 
+root@ubuntu:~$ sudo chown dev_t1:development /company/development 
+chown: cannot access '/company/development': No such file or directory
+root@ubuntu:~$ sudo mkdir /company/development
+root@ubuntu:~$ sudo mkdir /company/testing
+mkdir: cannot create directory ‘/company/testing’: File exists
+root@ubuntu:~$ sudo chown dev_t1:development /company/development 
+root@ubuntu:~$ sudo chown test_tl:testing /company/testing                             
+root@ubuntu:~$ sudo chown design_tl:testing /company/testing
+root@ubuntu:~$ sudo chown test_tl:testing /company/testing
+root@ubuntu:~$ sudo chown ops_tl:devops /company/devops~       
+chown: cannot access '/company/devops~': No such file or directory
+root@ubuntu:~$ sudo chown ops_tl:devops /company/devops 
+chown: cannot access '/company/devops': No such file or directory
+root@ubuntu:~$ sudo mkdir /company/devops     
+root@ubuntu:~$ sudo chown ops_tl:devops /company/devops
+root@ubuntu:~$ sudo mkdir /company/hr    
+root@ubuntu:~$ sudo chown hr_tl:hr /company/hr
+root@ubuntu:~$ sudo mkdir /company/design
+root@ubuntu:~$ sudo chown design_tl:design /company/design
+root@ubuntu:~$ sudo chmod 770 /company/development
+sudo chmod 770 /company/testing
+sudo chmod 770 /company/devops
+sudo chmod 770 /company/hr
+sudo chmod 770 /company/design
+root@ubuntu:~$ su dev1                         
+\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ 
+\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ 
+\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ 
+\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ 
+\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ exit
+root@ubuntu:~$ su dev1
+\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ touch /company/development/file1.txt
+\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$ su - dev2
+Password: 
+$ echo "Hello" >> /company/development/file1.txt
+-sh: 1: cannot create /company/development/file1.txt: Permission denied
+$ su test1
+Password: 
+su: Authentication failure
+$ su test1    
+Password: 
+su: Authentication failure
+$ su dev3
+Password: 
+$ su hr1
+Password: 
+su: Authentication failure
+$ pwd
+/home/dev2
+$ cd /company/hr
+sh: 3: cd: can't cd to /company/hr
+$ 

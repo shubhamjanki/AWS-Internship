@@ -1,0 +1,75 @@
+ AWS
+
+
+Scaling 
+auto scaling
+cloud watch
+
+parameters
+ min desired capacity
+ max desired cap.
+ 
+
+in EC2
+I have to setup auto scaling groups 
+group size 
+desired capacity -- 1
+min d cap ---1
+max---5
+metric type -- average cpu utilization
+instancw warmn up 100
+
+
+press next 
+
+	
+connect to ex2 instance using ssh
+
+now install 
+sudo apt install stress
+//it will generate load on the system
+stress --cpu 100 --timeout 300s
+
+
+
+next
+
+create looad balancing
+
+
+
+
+
+
+Monday
+vpc
+efs--------------
+	ebc
+	
+load balancer
+	application
+	network
+security groups
+elastic ips
+
+
+ec2 instrance
+    install nginx in one 
+    install apache in other
+
+autoscaling group
+
+
+
+chmod for changing the permission
+chmod 000 files clear all permission
+chmod 400 files read only access
+
+
+
+
+
+
+
+
+
