@@ -1,0 +1,9 @@
+amazon rds And amazon aurora
+Amazon Relational Database Service (Amazon RDS) and Amazon Aurora are fully managed database services that simplify setup, operation, and scaling of relational databases in the cloud.
+
+
+homework
+connect lambda to MySQL
+
+
+shared responsibility model
