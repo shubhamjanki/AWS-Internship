@@ -1,0 +1,24 @@
+---------------------------------------DEVOPS--------------------------------------
+-----SDLC------
+1.Requirement Analysis 
+2.Design
+3.development
+4.testing
+5.depployment
+6.feedback and maintenance 
+
+-------TERMS------
+1.CICD
+2.GIT
+3.BUILD TOOLS-MAVEN/GRADLE/VITE/WEBPACK
+4.DEPLOY- DOCKER /KUBERNETIS/EC2/ECS/EKS
+5.MONITOR-GRAFANA AND PROMETHEUS
+6.CODE QUALITY- SONAR QUBES(USE DOCKER)
+7.JENKINS-PIPELINE
+
+------------AWS TOOLS-------------
+1.CODE COMMIT FOR GITHUB IN AWS
+2.CODE BUILD-GRADLE /MAVEN
+3.CODE DEPLOY-EC2/DOCKER AND MACHINES
+4.CODE PIPELINE-JENKINS
+
